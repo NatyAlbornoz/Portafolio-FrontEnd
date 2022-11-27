@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <!-- Se incluye antes de que cierre head -->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Mi hoja de estilos -->
+    <link href="/Portafolio-FrontEnd/assets/css/styles.css" rel="stylesheet" />
+    <title>Panel</title>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fijar-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Portafolio-FrontEnd/#">
+                <img src="/Portafolio-FrontEnd/assets/img/logo2.png" alt="Logo" width="100">
+            </a>
+            <form class="d-flex" role="search">
+                <ul class="list-group list-group-horizontal">
+                    <a href="/Portafolio-FrontEnd/login.html" title="Logout">
+                        <li class="list-group-item">
+                            <!-- Botón que envía al Login -->
+                            <i class="fa-solid fa-user text-white"></i>
+                        </li>
+                    </a>
+                </ul>
+            </form>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-1 fijar-barra-panel">
+            <nav class="vertical" id="list-tab" role="tablist">
+                <ul>
+                    <li class="vertical">
+                        <a class="list-group-item list-group-item-action active" id="list-profile-list"
+                            data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile"  title="Perfil">
+                            <i class="fa-solid fa-address-card"></i>
+                        </a>
+                    </li>
+                    <li class="vertical">
+                        <a class="list-group-item list-group-item-action" id="list-social-list" data-bs-toggle="list"
+                            href="#list-social" role="tab" aria-controls="list-social" title="Redes">
+                            <i class="fa-solid fa-link"></i>
+                        </a>
+                    </li>
+                    <li class="vertical">
+                        <a class="list-group-item list-group-item-action" id="list-banner-list" data-bs-toggle="list"
+                            href="#list-banner" role="tab" aria-controls="list-banner" title="Banner">
+                            <i class="fa-regular fa-image"></i>
+                        </a>
+                    </li>
+                    <li class="vertical">
+                        <a class="list-group-item list-group-item-action" id="list-about-list" data-bs-toggle="list"
+                            href="#list-about" role="tab" aria-controls="list-about" title="Sobre Mí">
+                            <i class="fa-solid fa-align-justify"></i>
+                        </a>
+                    </li>
+                    <li class="vertical">
+                        <a class="list-group-item list-group-item-action" id="list-experience-list"
+                            data-bs-toggle="list" href="#list-experience" role="tab" aria-controls="list-experience" title="Experiencia">
+                            <i class="fa-sharp fa-solid fa-briefcase"></i>
+                        </a>
+                    </li>
+                    <li class="vertical">
+                        <a class="list-group-item list-group-item-action" id="list-education-list" data-bs-toggle="list"
+                            href="#list-education" role="tab" aria-controls="list-education" title="Educación">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </a>
+                    </li>
+                    <li class="vertical">
+                        <a class="list-group-item list-group-item-action" id="list-skills-list" data-bs-toggle="list"
+                            href="#list-skills" role="tab" aria-controls="list-skills" title="Habilidades">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </a>
+                    </li>
+                    <li class="vertical">
+                        <a class="list-group-item list-group-item-action" id="list-projects-list" data-bs-toggle="list"
+                            href="#list-projects" role="tab" aria-controls="list-projects" title="Proyectos">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-11 panel-content">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-profile" role="tabpanel"
+                    aria-labelledby="list-profile-list">
+                    <form>
+                        <div class="row">
+                            <div class="col-1 col-sm-0 col-md-0 vacio"> </div>
+                            <div class="col-10 col-sm-12 col-md-12 input mr-5">
+                                <h5 for="InputProfile">Perfil</h5>
+                                <div class="form-group mt-3">
+                                    <label for="InputLinkedIn">Imagen de perfil</label>
+                                    <input type="file" accept=".jpg,.png,.jpeg,.gif" class="form-control" id="profile"
+                                        aria-describedby="inputProfile" aria-label="Upload">
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="InputNombre">Nombre</label>
+                                    <input type="text" class="form-control" id="InputNombre"
+                                        placeholder="Ingresá tu nombre">
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="InputProfesion">Profesión</label>
+                                    <input type="text" class="form-control" id="InputProfesion"
+                                        placeholder="Ingresá tu título o profesión">
+                                </div>
+                                <div class="form-group mt-3 alinear-derecha">
+                                    <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                </div>
+                            </div>
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="list-social" role="tabpanel" aria-labelledby="list-social-list">
+                    <form>
+                        <div class="row">
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                            <div class="col-10 col-sm-12 col-md-12 input">
+                                <h5 for="InputSocial">Redes Sociales</h5>
+                                <div class="form-group mt-3">
+                                    <label for="InputLinkedIn">LinkedIn</label>
+                                    <input type="text" class="form-control" id="InputLinkedIn"
+                                        placeholder="Ingresá el link de tu perfil de LinkedIn">
+                                </div>
+                                <div class="form-group mt-3 alinear-derecha">
+                                    <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="InputInstagram">Instagram</label>
+                                    <input type="text" class="form-control" id="InputInstagram"
+                                        placeholder="Ingresá el link de tu perfil de Instagram">
+                                </div>
+                                <div class="form-group mt-3 alinear-derecha">
+                                    <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="InputGitHub">GitHub</label>
+                                    <input type="text" class="form-control" id="InputGitHub"
+                                        placeholder="Ingresá el link de tu perfil de GitHub">
+                                </div>
+                                <div class="form-group mt-3 alinear-derecha">
+                                    <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                </div>
+                            </div>
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="list-banner" role="tabpanel" aria-labelledby="list-banner-list">
+                    <form>
+                        <div class="row">
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                            <div class="col-10 col-sm-12 col-md-12 input">
+                                <h5 for="InputBanner">Banner</h5>
+                                <div class="form-group mt-3">
+                                    <label for="InputGitHub">Imagen</label>
+                                    <input type="file" accept=".jpg,.png,.jpeg,.gif" class="form-control" id="banner"
+                                        aria-describedby="inputBanner" aria-label="Upload">
+                                </div>
+                                <div class="form-group mt-3 alinear-derecha">
+                                    <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                </div>
+                            </div>
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="list-about" role="tabpanel" aria-labelledby="list-about-list">
+                    <form>
+                        <div class="row">
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                            <div class="col-10 col-sm-12 col-md-12 input">
+                                <h5 for="InputAbout">Sobre mí</h5>
+                                <div class="form-group mt-3">
+                                    <label for="InputGitHub">Descripción</label>
+                                    <textarea class="form-control" aria-label="about textarea"
+                                        placeholder="Escribí una descripción personal"></textarea>
+                                </div>
+                                <div class="form-group mt-3 alinear-derecha">
+                                    <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                </div>
+                            </div>
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="list-experience" role="tabpanel" aria-labelledby="list-experience-list">
+                    <form>
+                        <div class="row">
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                            <div class="col-10 col-sm-12 col-md-12 input">
+                                <div class="row">
+                                    <h5 for="InputExperienciaUno">Experiencia 1</h5>
+                                    <div class="form-group mt-3">
+                                        <label for="InputEmpresaUno">Empresa</label>
+                                        <input type="text" class="form-control" id="InputEmpresaUno"
+                                            placeholder="Ingrese la empresa en la que trabajó">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="InputCargoUno">Cargo</label>
+                                        <input type="text" class="form-control" id="InputCargoUno"
+                                            placeholder="Ingresá cargo que ocupaste">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="TextAreaDescripcionUno">Descripción</label>
+                                        <textarea class="form-control" aria-label="TextAreaDescripcionUno"
+                                            placeholder="Ingresá la descripción del cargo"></textarea>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-6">
+                                            <label for="FechaDesdeUno">Desde</label>
+                                            <input type="date" class="form-control" id="FechaDesdeUno">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="FechaHastaUno">Hasta</label>
+                                            <input type="date" class="form-control" id="FechaHastaUno">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h5 for="InputExperienciaDos">Experiencia 2</h5>
+                                    <div class="form-group mt-3">
+                                        <label for="InputEmpresaDos">Empresa</label>
+                                        <input type="text" class="form-control" id="InputEmpresaDos"
+                                            placeholder="Ingrese la empresa en la que trabajó">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="InputCargoDos">Cargo</label>
+                                        <input type="text" class="form-control" id="InputCargoDos"
+                                            placeholder="Ingresá cargo que ocupaste">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="TextAreaDescripcionDos">Descripción</label>
+                                        <textarea class="form-control" aria-label="TextAreaDescripcionDos"
+                                            placeholder="Ingresá la descripción del cargo"></textarea>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-6">
+                                            <label for="FechaDesdeDos">Desde</label>
+                                            <input type="date" class="form-control" id="FechaDesdeDos">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="FechaHastaDos">Hasta</label>
+                                            <input type="date" class="form-control" id="FechaHastaDos">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h5 for="InputExperienciaTres">Experiencia 3</h5>
+                                    <div class="form-group mt-3">
+                                        <label for="InputEmpresaTres">Empresa</label>
+                                        <input type="text" class="form-control" id="InputEmpresaTres"
+                                            placeholder="Ingrese la empresa en la que trabajó">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="InputCargoTres">Cargo</label>
+                                        <input type="text" class="form-control" id="InputCargoTres"
+                                            placeholder="Ingresá cargo que ocupaste">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="TextAreaDescripcionTres">Descripción</label>
+                                        <textarea class="form-control" aria-label="TextAreaDescripcionTres"
+                                            placeholder="Ingresá la descripción del cargo"></textarea>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-6">
+                                            <label for="FechaDesdeTres">Desde</label>
+                                            <input type="date" class="form-control" id="FechaDesdeTres">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="FechaHastaTres">Hasta</label>
+                                            <input type="date" class="form-control" id="FechaHastaTres">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="list-education" role="tabpanel" aria-labelledby="list-education-list">
+                    <form>
+                        <div class="row">
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                            <div class="col-10 col-sm-12 col-md-12 input">
+                                <div class="row">
+                                    <h5 for="InputEducacionUno">Item 1</h5>
+                                    <div class="form-group">
+                                        <label for="InputInstitucionUno">Institución</label>
+                                        <input type="text" class="form-control" id="InputInstitucionUno"
+                                            placeholder="Ingrese la institución">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="InputCarreraUno">Título</label>
+                                        <input type="text" class="form-control" id="InputCarreraUno"
+                                            placeholder="Ingresá el título de la carrera o curso realizado">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="InputLocalidadUno">Localidad</label>
+                                        <input type="text" class="form-control" id="InputLocalidadUno"
+                                            placeholder="Ingresá la localidad en la que realizaste los estudios">
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-6">
+                                            <label for="FechaDesdeUno">Desde</label>
+                                            <input type="date" class="form-control" id="FechaDesdeUno">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="FechaHastaUno">Hasta</label>
+                                            <input type="date" class="form-control" id="FechaHastaUno">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h5 for="InputEducacionDos">Item 2</h5>
+                                    <div class="form-group">
+                                        <label for="InputInstitucionDos">Institución</label>
+                                        <input type="text" class="form-control" id="InputInstitucionDos"
+                                            placeholder="Ingrese la institución">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="InputCarreraDos">Título</label>
+                                        <input type="text" class="form-control" id="InputCarreraDos"
+                                            placeholder="Ingresá el título de la carrera o curso realizado">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="InputLocalidadDos">Localidad</label>
+                                        <input type="text" class="form-control" id="InputLocalidadDos"
+                                            placeholder="Ingresá la localidad en la que realizaste los estudios">
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-6">
+                                            <label for="FechaDesdeDos">Desde</label>
+                                            <input type="date" class="form-control" id="FechaDesdeDos">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="FechaHastaDos">Hasta</label>
+                                            <input type="date" class="form-control" id="FechaHastaDos">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="list-skills" role="tabpanel" aria-labelledby="list-skills-list">
+                    <form>
+                        <div class="row">
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                            <div class="col-10 col-sm-12 col-md-12 input">
+                                <div>
+                                    <h5 for="InputSkillDos">Habilidad 1</h5>
+                                    <div class="form-group mt-3">
+                                        <label for="InputSkillUno">Habilidad</label>
+                                        <input type="text" class="form-control" id="InputSkillUno"
+                                            placeholder="Ingresá una habilidad">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="PorcentajeSkillUno">Porcentaje 1</label>
+                                        <input type="text" class="form-control" id="PorcentajeSkillUno"
+                                            placeholder="Ingresá el porcentaje de manejo de la habilidad">
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm ">Guardar</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 for="InputSkillDos">Habilidad 2</h5>
+                                    <div class="form-group mt-3">
+                                        <label for="InputSkillDos">Habilidad</label>
+                                        <input type="text" class="form-control" id="InputSkillDos"
+                                            placeholder="Ingresá una habilidad">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="PorcentajeSkillDos">Porcentaje</label>
+                                        <input type="text" class="form-control" id="PorcentajeSkillDos"
+                                            placeholder="Ingresá el porcentaje de manejo de la habilidad">
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm ">Guardar</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 for="InputSkillTres">Habilidad 3</h5>
+                                    <div class="form-group mt-3">
+                                        <label for="InputSkillTres">Habilidad</label>
+                                        <input type="text" class="form-control" id="InputSkillTres"
+                                            placeholder="Ingresá una habilidad">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="PorcentajeSkillTres">Porcentaje</label>
+                                        <input type="text" class="form-control" id="PorcentajeSkillTres"
+                                            placeholder="Ingresá el porcentaje de manejo de la habilidad">
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm ">Guardar</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 for="InputSkillCuatro">Habilidad 4</h5>
+                                    <div class="form-group mt-3">
+                                        <label for="InputSkillCuatro">Habilidad</label>
+                                        <input type="text" class="form-control" id="InputSkillCuatro"
+                                            placeholder="Ingresá una habilidad">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="PorcentajeSkillCuatro">Porcentaje</label>
+                                        <input type="text" class="form-control" id="PorcentajeSkillCuatro"
+                                            placeholder="Ingresá el porcentaje de manejo de la habilidad">
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm ">Guardar</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 for="InputSkillCinco">Habilidad 5</h5>
+                                    <div class="form-group mt-3">
+                                        <label for="InputSkillCinco">Habilidad</label>
+                                        <input type="text" class="form-control" id="InputSkillCinco"
+                                            placeholder="Ingresá una habilidad">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="PorcentajeSkillCinco">Porcentaje</label>
+                                        <input type="text" class="form-control" id="PorcentajeSkillCinco"
+                                            placeholder="Ingresá el porcentaje de manejo de la habilidad">
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm ">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1"> </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="list-projects" role="tabpanel" aria-labelledby="list-projects-list">
+                    <form>
+                        <div class="row">
+                            <div class="col-1 col-sm-0 col-md-0"> </div>
+                            <div class="col-10 col-sm-12 col-md-12 input">
+                                <div class="mb-4">
+                                    <h5 for="ProyectoUno">Proyecto 1</h5>
+                                    <div class="form-group mt-3">
+                                        <label for="PortadaUno">Miniatura</label>
+                                        <input type="file" accept=".jpg,.png,.jpeg,.gif" class="form-control"
+                                            id="PortadaUno" aria-describedby="PortadaUno" aria-label="Upload">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="TituloUno">Título </label>
+                                        <input type="text" class="form-control" id="TituloUno"
+                                            placeholder="Ingresá el título del proyecto">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="LinkUno">Link</label>
+                                        <input type="text" class="form-control" id="LinkUno"
+                                            placeholder="Ingresá el link del proyecto">
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm ">Guardar</button>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <h5 for="ProyectoDos">Proyecto 2</h5>
+                                    <div class="form-group mt-3">
+                                        <label for="PortadaDos">Miniatura</label>
+                                        <input type="file" accept=".jpg,.png,.jpeg,.gif" class="form-control"
+                                            id="PortadaDos" aria-describedby="PortadaDos" aria-label="Upload">
+                                    </div>
+                                    <div class="form-group mt-3 ">
+                                        <label for="TituloDos">Título </label>
+                                        <input type="text" class="form-control" id="TituloDos"
+                                            placeholder="Ingresá el título del proyecto">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="LinkDos">Link</label>
+                                        <input type="text" class="form-control" id="LinkDos"
+                                            placeholder="Ingresá el link del proyecto">
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h5 for="ProyectoTres">Proyecto 3</h5>
+                                    <div class="form-group mt-3">
+                                        <label for="PortadaTres">Miniatura</label>
+                                        <input type="file" accept=".jpg,.png,.jpeg,.gif" class="form-control"
+                                            id="PortadaTres" aria-describedby="PortadaTres" aria-label="Upload">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="TituloTres">Título </label>
+                                        <input type="text" class="form-control" id="TituloTres"
+                                            placeholder="Ingresá el título del proyecto">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="LinkTres">Link</label>
+                                        <input type="text" class="form-control" id="LinkTres"
+                                            placeholder="Ingresá el link del proyecto">
+                                    </div>
+                                    <div class="form-group mt-3 alinear-derecha">
+                                        <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-1 col-sm-0 col-md-0"> </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="panel bg-dark text-center text-white fs-6">
+        <div class="">
+            &copy Copyright Natalia Albornoz Villamil - 2022
+        </div>
+    </footer>
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
